@@ -68,7 +68,7 @@ extensionDir.eachFile( FILES )
 def workAfterNar =  workCollection.minus(narCollection).minus(customNarCollection);
 
 // We want some JSON
-def json = groovy.json.JsonOutput.toJson(workAfterNar)
+def json = groovy.json.JsonOutput.toJson(workAfterNar);
 
 // We are going to output JSON
 flowFile = session.putAttribute( flowFile, "mime.type", "application/json" );
@@ -78,9 +78,9 @@ session.write(flowFile,
     { outputStream ->
         outputStream.write( json.getBytes() )
     } as OutputStreamCallback
-)
+);
 
 // Transition to success
-session.transfer(flowFile, REL_SUCCESS)
+session.transfer(flowFile, REL_SUCCESS);
 
 // TODO:  Need to handle the error / fail case.

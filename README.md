@@ -18,4 +18,4 @@ Each script included in this repository are noted below and include a descriptio
 
 | Script| Language| Notes|
 | ---|:---:|:---|
-|narDirectoryCompare |Groovy |Used to perform a 3 way compare on the working, extention, and standard NAR directories to determine if NiFi needs a restart because of uncleaned working files due to deleting a customer NAR. <p>Runs in an ExecuteGroovyScript Processor<p> Can not run in current form in a standalone Groovy environment, as it requires NiFi attributes.|
+|narDirectoryCompare |Groovy |Used to perform a 3 way compare on the working, extention, and standard NAR directories to determine if NiFi needs a restart because of uncleaned working files due to deleting a customer NAR. </p>Runs in an ExecuteGroovyScript Processor </p> Can not run in current form in a standalone Groovy environment, as it requires NiFi attributes.|
